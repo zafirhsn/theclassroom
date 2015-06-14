@@ -11,7 +11,7 @@ private boolean boardScreen = false;
 private boolean helpScreen = false;
 
 void setup() {
-  size(800, 800);
+  size(800, 700);
   
   //Load background images onto window (wood, checkerboard)
   createBackground();
@@ -44,7 +44,7 @@ void createStart() {
   fill(0);
   textSize(50);
   textAlign(RIGHT, CENTER);
-  text("Play", (width-100)/2, height/2);
+  text("Play", (width-100)/2, height/2+50);
 }
 
 //=======BACK ARROW=========
@@ -61,7 +61,7 @@ void onStart(){
 
 void setupClassroom(){
   final int maxX=800;
-  final int maxY=800;
+  final int maxY=700;
   background(24,116,205);
   fill(238,180,34);
   rect(30,30,maxX-60,maxY-60);
@@ -70,9 +70,19 @@ void setupClassroom(){
   line(maxX,0,maxX-30,30);
   line(maxX-30,maxY-30,maxX,maxY);
   
-  for(int i=0;i<4;i++){
-     for(int j=0;j<4;j++){
-        
+  fill(0);
+  rect(65,75,100,50);
+  fill(184,134,11);
+  rect(70,80,90,40);
+  
+  for(int i=0;i<4;i=i+1){
+     for(int j=0;j<4;j=j+1){
+        int x=65+190*i;
+        int y=200+120*j;
+        fill(0);
+        rect(x,y,100,50);
+        fill(184,134,11);
+        rect(x+5,y+5,90,40);
      } 
   }
 }
