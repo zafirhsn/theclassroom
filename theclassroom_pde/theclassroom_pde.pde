@@ -55,4 +55,24 @@ void createBack() {
 }
 //==========================
 
+void onStart(){
+   setupClassroom(); 
+}
 
+void setupClassroom(){
+  final int maxX=800;
+  final int maxY=800;
+  background(24,116,205);
+  fill(238,180,34);
+  rect(30,30,maxX-60,maxY-60);
+  line(0,0,30,30);
+  line(0,maxY,30,maxY-30);
+  line(maxX,0,maxX-30,30);
+  line(maxX-30,maxY-30,maxX,maxY);
+  
+  for(int i=0;i<4;i++){
+     for(int j=0;j<4;j++){
+        
+     } 
+  }
+}
